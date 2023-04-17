@@ -1,0 +1,13 @@
+i2c:
+  sda: GPIO21
+  scl: GPIO22
+
+display:
+  platform: lcd_pcf8574
+  dimensions: 16x2
+  address: 0x27
+  lambda: |-
+    it.printf(2, 0, "%.1f", id(temp).state);
+    it.printf(2, 1, "%.1f", id(hum).state);
+    it.print(0, 0, "T=");
+    it.print(0, 1, "H=");

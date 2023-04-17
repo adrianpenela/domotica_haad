@@ -1,0 +1,4 @@
+switch:
+    platform: gpio
+    name: "releHaad"
+    pin: GPIO26
