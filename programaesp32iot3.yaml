@@ -1,0 +1,83 @@
+#CONFIGURACIÓN
+esphome:
+  name: esp32-iot3
+  friendly_name: ESP32_IoT3
+
+esp32:
+  board: nodemcu-32s
+  framework:
+    type: arduino
+
+logger:
+
+api:
+  encryption:
+    key: "your_key"
+
+ota:
+  password: "your_password"
+
+wifi:
+  ssid: !secret wifi_ssid
+  password: !secret wifi_password
+
+  ap:
+    ssid: "Esp32-Iot3 Fallback Hotspot"
+    password: "your_password"
+
+captive_portal:
+
+#DHT11
+sensor:
+    platform: dht
+    model: DHT11
+    pin: GPIO4
+    temperature:
+      name: "temperaturaHaad"
+      id: "temp"
+    humidity:
+      name: "humedadHaad"
+      id: "hum"
+    update_interval: 5s #intervalo de medición
+
+#RELÉ
+switch:
+    platform: gpio
+    name: "releHaad"
+    pin: GPIO26
+
+#LED
+light:
+  platform: binary
+  name: "led_haad"
+  output: light_output
+
+output:
+  id: light_output
+  platform: gpio
+  pin: 
+    number: GPIO16
+    inverted: true #invertir encencido y apagado
+    
+#BOTÓN
+binary_sensor:
+    platform: gpio
+    pin: GPIO17
+    name: "botón_haad"
+    device_class: window
+    
+#DISPLAY    
+i2c: #pines y configuración i2c
+  sda: GPIO21
+  scl: GPIO22
+
+display:
+  platform: lcd_pcf8574
+  dimensions: 16x2
+  address: 0x27
+  lambda: |- #texto en pantalla para temperatura y humedad
+    it.printf(2, 0, "%.1f", id(temp).state);
+    it.printf(2, 1, "%.1f", id(hum).state);
+    it.print(0, 0, "T=");
+    it.print(0, 1, "H=");
+
