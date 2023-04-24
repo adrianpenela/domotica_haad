@@ -35,7 +35,6 @@ binary_sensor:
     device_class: motion
     
 #servo
-
 number:
   - platform: template
     name: Servo Control
@@ -53,7 +52,7 @@ servo:
    - id: my_servo
      output: pwm_output
 
-sensor de presencia
+#sensor de presencia
 output:
   - platform: esp8266_pwm
     id: pwm_output
