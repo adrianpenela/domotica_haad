@@ -1,0 +1,12 @@
+#LED
+light:
+  platform: binary
+  name: "led_haad"
+  output: light_output
+
+output:
+  id: light_output
+  platform: gpio
+  pin: 
+    number: GPIO16
+    inverted: true #invertir encendido y apagado
