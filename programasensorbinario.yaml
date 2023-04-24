@@ -1,6 +1,0 @@
-#BOTÓN
-binary_sensor:
-    platform: gpio
-    pin: GPIO17
-    name: "botón_haad"
-    device_class: window
