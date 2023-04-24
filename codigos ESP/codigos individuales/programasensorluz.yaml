@@ -1,0 +1,9 @@
+#sensor de luz
+sensor:
+  - platform: adc
+    pin: A0
+    id: 'LDR_1'
+    name: "ESP8266 WEMOS Luz"
+    update_interval: 1s
+    filters:
+      - multiply: 3.3

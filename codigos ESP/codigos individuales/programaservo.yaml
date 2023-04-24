@@ -1,0 +1,17 @@
+#servo
+number:
+  - platform: template
+    name: Servo Control
+    min_value: -100
+    max_value: 100
+    step: 1
+    optimistic: true
+    set_action:
+      then:
+        - servo.write:
+            id: my_servo
+            level: !lambda 'return x / 100.0;'
+
+servo:
+   - id: my_servo
+     output: pwm_output

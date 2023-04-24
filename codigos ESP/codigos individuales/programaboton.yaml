@@ -1,0 +1,6 @@
+#boton
+binary_sensor:
+    platform: gpio
+    pin: GPIO4
+    name: "sensorpir_haad"
+    device_class: motion
