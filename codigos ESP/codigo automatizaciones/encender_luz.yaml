@@ -12,5 +12,5 @@ action:
     data: {}
     target:
       entity_id: light.esp32_iot3_led_haad
-mode: single
+mode: single 
 
