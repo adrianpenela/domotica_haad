@@ -10,3 +10,7 @@ Display (LCD 16x2), ventilador conectado a relé y un microservo 9 g.
 Este sería un esquema de los elementos del proyecto:
 
 ![Captura de pantalla de 2023-04-19 10-22-19 png](https://user-images.githubusercontent.com/129267162/233946745-0ae100c9-0830-4704-a98e-565b2d68eb33.png)
+
+Nuestras tareas fueron recogidas en un flujo de trabajo:
+
+![flujo de trabajo](https://user-images.githubusercontent.com/129267162/235868011-9c8ea5f6-580a-4b8c-9065-f809baad6b3a.png)
