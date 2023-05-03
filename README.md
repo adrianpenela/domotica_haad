@@ -14,3 +14,7 @@ Este sería un esquema de los elementos del proyecto:
 Nuestras tareas fueron recogidas en un flujo de trabajo:
 
 ![flujo de trabajo](https://user-images.githubusercontent.com/129267162/235868011-9c8ea5f6-580a-4b8c-9065-f809baad6b3a.png)
+
+El esquema de conexiones es el siguiente:
+
+![EsquemaConexions_bb](https://user-images.githubusercontent.com/129267162/235868787-1eb2e51c-4d2c-4b97-a398-12d2cd094dd8.svg)
